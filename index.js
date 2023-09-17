@@ -66,7 +66,6 @@ const run = async () => {
         res.send({ status: 200, message: "success", data: categories });
       } catch (error) {
         console.error("Error fetching categories:", error);
-        res.status(500).send({ status: 500, message: "Internal Server Error" });
       }
     });
 
@@ -89,7 +88,7 @@ const run = async () => {
 run().catch((err) => console.log(err));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Welcome to Books World");
 });
 
 app.listen(port, () => {
